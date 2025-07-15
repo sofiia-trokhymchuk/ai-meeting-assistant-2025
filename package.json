@@ -23,6 +23,7 @@
 		"lint:js": "npx eslint . --max-warnings=0 --no-warn-ignored",
 		"lint:format": "prettier --check \"**/*.{ts,tsx,json,md,css,html}\"",
 		"lint:trash": "knip",
+		"lint:css": "npx stylelint \"**/*.css\"",
 		"format": "prettier --write \"**/*.{ts,tsx,json,md,css,html}\"",
 		"lint": "concurrently \"npm:lint:*\" && npm run lint --workspaces",
 		"ci:prepare": "simple-git-hooks"
