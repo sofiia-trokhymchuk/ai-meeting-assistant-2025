@@ -11,22 +11,22 @@ import globals from "globals";
 
 const JS_MAX_PARAMS_ALLOWED = 3;
 
-/** @typedef {import("eslint").Linter.FlatConfig} */
-let FlatConfig;
+/** @typedef {import("eslint").Linter.Config} */
+let Config;
 /** @typedef {import("eslint").Linter.ParserModule} */
 let ParserModule;
 
-/** @type {FlatConfig} */
+/** @type {Config} */
 const filesConfig = {
 	files: ["**/*.{js,ts,tsx}"],
 };
 
-/** @type {FlatConfig} */
+/** @type {Config} */
 const ignoresConfig = {
 	ignores: ["apps", "packages", "dangerfile.ts"],
 };
 
-/** @type {FlatConfig} */
+/** @type {Config} */
 const jsConfig = {
 	languageOptions: {
 		globals: globals.node,
@@ -66,7 +66,7 @@ const jsConfig = {
 	},
 };
 
-/** @type {FlatConfig} */
+/** @type {Config} */
 const importConfig = {
 	plugins: {
 		import: importPlugin,
@@ -97,7 +97,7 @@ const importConfig = {
 	},
 };
 
-/** @type {FlatConfig} */
+/** @type {Config} */
 const sonarConfig = {
 	plugins: {
 		sonarjs,
@@ -109,7 +109,7 @@ const sonarConfig = {
 	},
 };
 
-/** @type {FlatConfig} */
+/** @type {Config} */
 const unicornConfig = {
 	plugins: {
 		unicorn,
@@ -120,7 +120,7 @@ const unicornConfig = {
 	},
 };
 
-/** @type {FlatConfig} */
+/** @type {Config} */
 const perfectionistConfig = {
 	plugins: {
 		perfectionist,
@@ -173,7 +173,7 @@ const perfectionistConfig = {
 	},
 };
 
-/** @type {FlatConfig} */
+/** @type {Config} */
 const typescriptConfig = {
 	files: ["**/*.ts", "**/*.tsx"],
 	languageOptions: {
@@ -199,7 +199,7 @@ const typescriptConfig = {
 	},
 };
 
-/** @type {FlatConfig} */
+/** @type {Config} */
 const jsdocConfig = {
 	files: ["eslint.config.js", "lint-staged.config.js"],
 	plugins: {
@@ -211,7 +211,7 @@ const jsdocConfig = {
 	},
 };
 
-/** @type {FlatConfig[]} */
+/** @type {Config[]} */
 const overridesConfigs = [
 	{
 		files: [
@@ -229,7 +229,7 @@ const overridesConfigs = [
 	},
 ];
 
-/** @type {FlatConfig[]} */
+/** @type {Config[]} */
 const config = [
 	filesConfig,
 	ignoresConfig,
