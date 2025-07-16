@@ -1,3 +1,5 @@
+import type { FastifyReply, FastifyRequest } from "fastify";
+
 import { type Logger } from "~/libs/modules/logger/logger.js";
 import { type ServerApplicationRouteParameters } from "~/libs/modules/server-application/server-application.js";
 
@@ -23,8 +25,8 @@ class BaseController implements Controller {
 
 	private async mapHandler(
 		handler: APIHandler,
-		request: Parameters<ServerApplicationRouteParameters["handler"]>[0],
-		reply: Parameters<ServerApplicationRouteParameters["handler"]>[1],
+		request: FastifyRequest,
+		reply: FastifyReply,
 	): Promise<void> {
 		this.logger.info(`${request.method.toUpperCase()} on ${request.url}`);
 
@@ -34,9 +36,7 @@ class BaseController implements Controller {
 		return await reply.status(status).send(payload);
 	}
 
-	private mapRequest(
-		request: Parameters<ServerApplicationRouteParameters["handler"]>[0],
-	): APIHandlerOptions {
+	private mapRequest(request: FastifyRequest): APIHandlerOptions {
 		const { body, params, query } = request;
 
 		return {
