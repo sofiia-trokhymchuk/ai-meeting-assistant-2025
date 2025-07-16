@@ -5,7 +5,7 @@ const configureString = <T extends Record<string, string>>(
 
 	const options = copiedArguments.pop() as T;
 
-	let result = copiedArguments.join("");
+	let result = (copiedArguments as string[]).join("");
 
 	for (const [key, value] of Object.entries(options)) {
 		result = result.replace(`:${key}`, value);

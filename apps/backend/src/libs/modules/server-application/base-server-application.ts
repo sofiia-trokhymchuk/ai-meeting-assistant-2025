@@ -34,7 +34,7 @@ type Constructor = {
 class BaseServerApplication implements ServerApplication {
 	private apis: ServerApplicationApi[];
 
-	private app: FastifyInstance;
+	private app!: FastifyInstance;
 
 	private config: Config;
 
@@ -51,6 +51,10 @@ class BaseServerApplication implements ServerApplication {
 		this.database = database;
 		this.apis = apis;
 
+		this.initApp();
+	}
+
+	private initApp(): void {
 		this.app = Fastify({
 			ignoreTrailingSlash: true,
 		});
