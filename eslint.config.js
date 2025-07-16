@@ -77,7 +77,7 @@ const importConfig = {
 		"import/extensions": [
 			"error",
 			{
-				js: "always",
+				js: "ignorePackages",
 			},
 		],
 		"import/newline-after-import": ["error"],

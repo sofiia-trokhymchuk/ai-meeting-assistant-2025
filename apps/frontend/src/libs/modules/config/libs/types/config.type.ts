@@ -1,4 +1,4 @@
-import { type Config as LibraryConfig } from "shared";
+import { type Config as LibraryConfig } from "@ai-assistant/shared";
 
 import { EnvironmentSchema } from "./types.js";
 

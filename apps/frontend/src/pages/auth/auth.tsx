@@ -29,17 +29,11 @@ const Auth: React.FC = () => {
 	);
 
 	const getScreen = (screen: string): React.JSX.Element => {
-		switch (screen) {
-			case AppRoute.SIGN_IN: {
-				return <SignInForm onSubmit={handleSignInSubmit} />;
-			}
-			case AppRoute.SIGN_UP: {
-				return <SignUpForm onSubmit={handleSignUpSubmit} />;
-			}
-			default: {
-				return <></>;
-			}
+		if (screen === AppRoute.SIGN_UP) {
+			return <SignUpForm onSubmit={handleSignUpSubmit} />;
 		}
+
+		return <SignInForm onSubmit={handleSignInSubmit} />;
 	};
 
 	return (

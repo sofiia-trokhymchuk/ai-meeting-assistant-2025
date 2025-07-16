@@ -1,1 +1,1 @@
-export { type Storage } from "shared";
+export { type Storage } from "@ai-assistant/shared";

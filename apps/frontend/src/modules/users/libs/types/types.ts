@@ -3,4 +3,4 @@ export {
 	type UserGetAllResponseDto,
 	type UserSignUpRequestDto,
 	type UserSignUpResponseDto,
-} from "shared";
+} from "@ai-assistant/shared";

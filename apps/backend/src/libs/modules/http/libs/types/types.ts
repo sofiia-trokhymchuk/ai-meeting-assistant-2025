@@ -1,1 +1,1 @@
-export { type HTTPMethod } from "shared";
+export { type HTTPMethod } from "@ai-assistant/shared";
