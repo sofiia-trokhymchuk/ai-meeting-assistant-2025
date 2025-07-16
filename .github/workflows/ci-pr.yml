@@ -24,6 +24,7 @@ jobs:
     name: Add labels to PR
     permissions:
       contents: read
+      issues: write
       pull-requests: write
 
     runs-on: ubuntu-latest
@@ -64,7 +65,6 @@ jobs:
   ci-pr:
     permissions:
       contents: read
-      issues: write
       pull-requests: write
 
     name: PR Linting
