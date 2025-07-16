@@ -1,1 +1,1 @@
-export { AuthApiPath } from "shared";
+export { AuthApiPath } from "@ai-assistant/shared";

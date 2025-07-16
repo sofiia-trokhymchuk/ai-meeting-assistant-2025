@@ -13,17 +13,16 @@
 	"scripts": {
 		"git:hook:precommit": "lint-staged --cwd $PWD",
 		"git:hook:commit": "npx @commitlint/cli --edit",
-		"build:shared": "npm run build -w shared",
-		"build:frontend": "npm run build -w frontend",
-		"build:backend": "npm run build -w backend",
-		"build": "npm run build --workspaces",
+		"build:shared": "npm run build -w packages/shared",
+		"build:frontend": "npm run build -w apps/frontend",
+		"build:backend": "npm run build -w apps/backend",
+		"build": "npm run build:shared && npm run build:backend && npm run build:frontend",
 		"lint:editor": "editorconfig-checker",
 		"lint:fs": "ls-lint",
 		"lint:type": "npx tsc --noEmit",
 		"lint:js": "npx eslint . --max-warnings=0 --no-warn-ignored",
 		"lint:format": "prettier --check \"**/*.{ts,tsx,json,md,css,html}\"",
 		"lint:trash": "knip",
-		"lint:css": "npx stylelint \"**/*.css\"",
 		"format": "prettier --write \"**/*.{ts,tsx,json,md,css,html}\"",
 		"lint": "concurrently \"npm:lint:*\" && npm run lint --workspaces",
 		"ci:prepare": "simple-git-hooks"
@@ -55,6 +54,7 @@
 		"stylelint": "16.21.1",
 		"stylelint-config-recess-order": "7.1.0",
 		"stylelint-config-standard": "38.0.0",
+		"tsc-alias": "1.8.16",
 		"typescript": "5.8.3"
 	},
 	"simple-git-hooks": {

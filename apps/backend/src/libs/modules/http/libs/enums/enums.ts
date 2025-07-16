@@ -1,1 +1,1 @@
-export { HTTPCode } from "shared";
+export { HTTPCode } from "@ai-assistant/shared";

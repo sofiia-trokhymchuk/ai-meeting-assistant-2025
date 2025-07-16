@@ -1,1 +1,1 @@
-export { HTTPError } from "shared";
+export { HTTPError } from "@ai-assistant/shared";

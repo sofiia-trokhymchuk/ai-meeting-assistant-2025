@@ -4,4 +4,4 @@ export {
 	type ServerErrorResponse,
 	type ValidationSchema,
 	type ValueOf,
-} from "shared";
+} from "@ai-assistant/shared";

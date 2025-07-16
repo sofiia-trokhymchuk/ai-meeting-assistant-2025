@@ -1,1 +1,1 @@
-export { configureString } from "shared";
+export { configureString } from "@ai-assistant/shared";

@@ -84,7 +84,7 @@ class BaseServerApplication implements ServerApplication {
 
 				if (error instanceof HTTPError) {
 					this.logger.error(
-						`[HTTP Error]: ${error.status as string} – ${error.message}`,
+						`[HTTP Error]: ${error.status.toString()} – ${error.message}`,
 					);
 
 					const response: ServerCommonErrorResponse = {
