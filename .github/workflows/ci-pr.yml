@@ -64,6 +64,7 @@ jobs:
   ci-pr:
     permissions:
       contents: read
+      issues: write
       pull-requests: write
 
     name: PR Linting
