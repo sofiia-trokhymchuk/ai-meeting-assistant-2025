@@ -1,14 +1,14 @@
 import baseConfig from "../../eslint.config.js";
 
-/** @typedef {import("eslint").Linter.FlatConfig} */
-let FlatConfig;
+/** @typedef {import("eslint").Linter.Config} */
+let Config;
 
-/** @type {FlatConfig} */
+/** @type {Config} */
 const ignoresConfig = {
 	ignores: ["build"],
 };
 
-/** @type {FlatConfig[]} */
+/** @type {Config[]} */
 const overridesConfigs = [
 	{
 		files: ["knexfile.ts"],
@@ -27,15 +27,9 @@ const overridesConfigs = [
 			],
 		},
 	},
-	{
-		files: ["src/libs/modules/controller/base-controller.module.ts"],
-		rules: {
-			"@typescript-eslint/no-magic-numbers": ["off"],
-		},
-	},
 ];
 
-/** @type {FlatConfig[]} */
+/** @type {Config[]} */
 const config = [...baseConfig, ignoresConfig, ...overridesConfigs];
 
 export default config;

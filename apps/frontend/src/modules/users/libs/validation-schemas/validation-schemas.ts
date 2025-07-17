@@ -1,1 +1,1 @@
-export { userSignUpValidationSchema } from "shared";
+export { userSignUpValidationSchema } from "@ai-assistant/shared";

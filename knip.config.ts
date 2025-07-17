@@ -8,14 +8,12 @@ const config: KnipConfig = {
 			entry: ["./dangerfile.ts"],
 		},
 		"apps/backend": {
-			entry: ["src/index.ts", "src/db/migrations/*.ts", "knexfile.ts"],
+			entry: ["src/db/migrations/*.ts", "knexfile.ts"],
 			ignoreDependencies: ["pg"],
 		},
-		"apps/frontend": {
-			entry: ["src/index.tsx"],
-		},
+		"apps/frontend": {},
 		"packages/shared": {
-			entry: ["src/index.ts"],
+			includeEntryExports: true,
 		},
 	},
 };

@@ -1,1 +1,1 @@
-export { APIPath, AppEnvironment, ServerErrorType } from "shared";
+export { APIPath, AppEnvironment, ServerErrorType } from "@ai-assistant/shared";
